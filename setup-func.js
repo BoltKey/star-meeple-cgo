@@ -1,4 +1,8 @@
-const gameSituation = require("./gamesituation.js");
+const fs = require("fs");
+
+console.log("loaded fs");
+
+//const gameSituation = require("./gamesituation.js");
 class deck {
   constructor(options) {
     // TODO: get deck from DB based on options.name, shuffle if options.shuffled
