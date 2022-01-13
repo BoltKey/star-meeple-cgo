@@ -28,7 +28,7 @@ class deck {
     return drawnCard;
   }
 }
-class starmeeples extends gameSituation { 
+class starmeeples/* extends gameSituation*/ { 
   constructor(startPosition, events) {
     super(startPosition, events);
   }
