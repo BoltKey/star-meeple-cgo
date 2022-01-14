@@ -1,4 +1,5 @@
 let components = {
+  dims: [1000, 1000],
   mainBoard: {
     type: "board",
     image: "url(http://cloud-3.steamusercontent.com/ugc/1849290583447002682/9C5ACA683963F0466F8CD8D1AEC155B197D524F3/)",
@@ -10,6 +11,7 @@ let components = {
       dims: [1000, 1000],
       pirate: {
         multi: true,
+        accepts: ["pirate"],
         coords: [
           {x: 150, y: 250},
           {x: 225, y: 120},
@@ -17,6 +19,7 @@ let components = {
         ],
       },
       mission: {
+        accepts: ["mission"],
         coords: [
           {x: 300, y: 250},
           {x: 450, y: 50},
@@ -25,6 +28,7 @@ let components = {
       },
       playerShip: {
         multi: true;
+        accepts: ["playerShip"],
         coords: [
           {x: 320, y: 200},
           {x: 320, y: 250},
@@ -39,7 +43,7 @@ let components = {
     positions: {
       dims: [1000, 500]
       tech: {
-        accepts: ["damage", "artifact", "pirate"],
+        accepts: ["tech-1", "tech-2"],
         coords: [
           {x: 50, y: 100},
           {x: 100, y: 100},
@@ -50,6 +54,7 @@ let components = {
           {x: 175, y: 300}
         ]
       },
+    }
   },
   playerBoard: {
     type: "board",
