@@ -1,130 +1,81 @@
-const fs = require("fs");
-
-console.log("loaded fs");
-
-class deck {
-  constructor(options) {
-    // TODO: get deck from DB based on options.name, shuffle if options.shuffled
-    this.deckName = options.name;
-  }
-  static async create(options) {
-    //https://stackoverflow.com/questions/36363278/can-async-await-be-used-in-constructors
-    const o = new deck(options);
-    await o.loadDeckFromDb();
-    return o;
-  }
-  async loadDeckFromDb() {
-    // await db.findone blah
-    this.cards = ["Ram Drive", "Transdimensional Storage", "test 3", "test 4", "test 5", "test 6", "test 7", "test 8"];
+async function setup(gameSituation) {
+  let mainBoard = gameSituation.createComponent("mainBoard");
+  gameSituation.root.addComponent(mainBoard);
+  mainBoard.addComponent(
+    gameSituation.createComponent("pirate", {reward: "android"}),
+    "pirate", 8
+  );
+  mainBoard.addComponent(
+    gameSituation.createComponent("pirate", {reward: "android"}),
+    "pirate", 2
+  );
+  mainBoard.addComponent(
+    gameSituation.createComponent("pirate", {reward: "artifact"}),
+    "pirate", 4
+  );
+  mainBoard.addComponent(
+    gameSituation.createComponent("pirate", {reward: "artifact"}),
+    "pirate", 6
+  );
+  
+  
+  
+  for (let player of gamesituation.getPlayers()) {
+    let playerBoard = gameSituation.createComponent("playerBoard");
+    player.area.addComponent(playerBoard);
     
+    for (let i of [0, 1, 4, 5]) {
+      playerBoard.addComponent(gameSituation.createComponent("damage"), "tech", i);
+    }
+    
+    for (let i of [4, 5, 6]) {
+      playerBoard.addComponent(gameSituation.createComponent("damage"), "inventory", i);
+    }
+    let colors ["red", "yellow", "blue"];
+    for (let i = 0; i < 3; ++i) {
+      playerBoard.addComponent(gameSituation.createComponent(
+        "meeple", 
+        {color: colors[i], level: 1}), 
+        "maintenance", i
+      );
+      
+      playerBoard.addComponent(gameSituation.createComponent(
+        "meeple", 
+        {color: colors[i], level: 1}), 
+        "onDuty", i);
+    }
+    player.setCounter("medals", 1);
+    player.setCounter("score", 0);
   }
   
-  getMongoDoc() {
-    return this.cards;
+  let pirateSupply = mainBoard.addComponent(gameSituation.createComponent("pirateBag"));
+  
+  const androidPirateAmt = 10;
+  const artPirateAmt = 10;
+  for (let i = 0; i < androidPirateAmt; ++i) {
+    pirateSupply.addComponent(gameSituation.createComponent("pirate", {reward: "android"});
   }
-  drawCard() {
-    
-    let drawnCard = this.cards.shift();
-    return drawnCard;
+  for (let i = 0; i < artPirateAmt; ++i) {
+    pirateSupply.addComponent(gameSituation.createComponent("pirate", {reward: "artifact"});
   }
+  
+  let techDeck = gameSituation.createDeck("tech-1", {shuffled: true, hidden: true, facedown: true});
+  let techVpDeck = gameSituation.createDeck("tech-2", {shuffled: true, hidden: true, facedown: true});
+  let missionDeck = gameSituation.createDeck("missions", {shuffled: true, hidden: true, facedown: true});
+  
+  let techSupply = gameSituation.createComponent("techSupply");
+  gameSituation.root.addComponent(techSupply);
+  for (var i = 0; i < 4; ++i) {
+    techSupply.addComponent(techDeck.drawCard(), "tech", i);
+  }
+  for (var i = 4; i < 7; ++i) {
+    techSupply.addComponent(techVpDeck.drawCard(), "tech", i);
+  }
+  
+  for (var i = 0; i < 7; ++i) {
+    mainBoard.addComponent(missionDeck.drawCard(), "mission", i)
+  }
+  return 0;
 }
-class starmeeples/* extends gameSituation*/ { 
-  constructor(startPosition, events) {
-    super(startPosition, events);
-  }
-  async setup(playerAmt, tableSettings) {
-    let mainBoard = {
-      pirates: [
-        {type: "pirate", reward: "android", position: "8"},
-        {type: "pirate", reward: "android", position: "2"},
-        {type: "pirate", reward: "artifact", position: "4"},
-        {type: "pirate", reward: "artifact", position: "6"},
-      ],
-      missions: [],
-      playerShips: []
-    }
-    
-    let playerBoard = {
-      techPositions: [{type: {type: "damage"}}, {type: {type: "damage"}}, null, null, {type: "damage"}, {type: "damage"}],
-      invPositions: [null, null, null, {type: "damage"}, {type: "damage"}, {type: "damage"}, {type: "damage"}],
-      roomPositions: [{type: "damage"}, {type: "damage"}, {type: "damage"}, null, null, null, null],
-      missionPositions: [],
-      maintenancePositions: [
-        {type: "meeple", color: "blue", level: "ensign"},
-        {type: "meeple", color: "yellow", level: "ensign"},
-        {type: "meeple", color: "red", level: "ensign"},
-      ],
-      onDutyPositions: [
-        {type: "meeple", color: "red", level: "ensign"},
-        {type: "meeple", color: "yellow", level: "ensign"},
-        {type: "meeple", color: "blue", level: "ensign"},
-      ],
-    }
-    
-    let playerColors = ["brown", "turqoise", "purple", "orange"];
-    let players = {};
-    for (let playerNo = 0; playerNo < playerAmt; ++playerNo) {
-      let playerColor = playerColors[playerNo]
-      let player = {
-        color: playerColor,
-        medals: {type: "counter", value: 1},
-        score: {type: "counter", value: 0},
-        board: JSON.parse(JSON.stringify(playerBoard))
-      }
-      players[playerColor] = player;
-      
-      mainBoard.playerShips.push({type: "ship", color: playerColor, position: "planet" + Math.floor(1 + Math.random() * 8)});
-    }
-    
-    pirateSupply = [];
-    const androidPirateAmt = 10;
-    const artPirateAmt = 10;
-    for (let i = 0; i < androidPirateAmt; ++i) {
-      pirateSupply.push({type: "pirate", reward: "android"})
-    }
-    for (let i = 0; i < artPirateAmt; ++i) {
-      pirateSupply.push({type: "pirate", reward: "artifact"})
-    }
-    
-    let techDeck = await deck.create({name: "tech-1", shuffled: true, hidden: true, facedown: true});
-    let techVpDeck = await deck.create({name: "tech-2", shuffled: true, hidden: true, facedown: true});
-    let missionDeck = await deck.create({name: "missions", shuffled: true, hidden: true, facedown: true});
-    
-    let techSupply = {
-      cards: [
-        techDeck.drawCard(),
-        techDeck.drawCard(),
-        techDeck.drawCard(),
-        techDeck.drawCard(),
-        techVpDeck.drawCard(),
-        techVpDeck.drawCard(),
-        techVpDeck.drawCard(),
-      ]
-    };
-    
-    let missionSupply = {
-      cards: [
-        missionDeck.drawCard(),
-        missionDeck.drawCard(),
-        missionDeck.drawCard(),
-        missionDeck.drawCard(),
-        missionDeck.drawCard(),
-        missionDeck.drawCard(),
-        missionDeck.drawCard(),
-        missionDeck.drawCard(),
-      ]
-    };
-    
-    let techDeckData = techDeck.getMongoDoc();
-    let techVpDeckData = techVpDeck.getMongoDoc();
-    let missionDeckData = missionDeck.getMongoDoc();
-    
-    return {players, mainBoard, pirateSupply, techDeckData, techVpDeckData, missionDeckData, techSupply, missionSupply}
-  }
-}
-if (typeof process !== "undefined") {
-  setup(2, {"start-missions": true}).then(data => {
-    console.log(JSON.stringify(data, null, 2));
-  });
-}
-setup;
+
+module.exports = setup;
