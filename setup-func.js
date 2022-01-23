@@ -20,7 +20,7 @@ async function setup(gameSituation) {
   
   
   
-  for (let player of gamesituation.getPlayers()) {
+  for (let player of gameSituation.getPlayers()) {
     let playerBoard = gameSituation.createComponent("playerBoard");
     player.area.addComponent(playerBoard);
     
@@ -31,7 +31,7 @@ async function setup(gameSituation) {
     for (let i of [4, 5, 6]) {
       playerBoard.addComponent(gameSituation.createComponent("damage"), "inventory", i);
     }
-    let colors ["red", "yellow", "blue"];
+    let colors = ["red", "yellow", "blue"];
     for (let i = 0; i < 3; ++i) {
       playerBoard.addComponent(gameSituation.createComponent(
         "meeple", 
@@ -53,10 +53,10 @@ async function setup(gameSituation) {
   const androidPirateAmt = 10;
   const artPirateAmt = 10;
   for (let i = 0; i < androidPirateAmt; ++i) {
-    pirateSupply.addComponent(gameSituation.createComponent("pirate", {reward: "android"});
+    pirateSupply.addComponent(gameSituation.createComponent("pirate", {reward: "android"}));
   }
   for (let i = 0; i < artPirateAmt; ++i) {
-    pirateSupply.addComponent(gameSituation.createComponent("pirate", {reward: "artifact"});
+    pirateSupply.addComponent(gameSituation.createComponent("pirate", {reward: "artifact"}));
   }
   
   let techDeck = gameSituation.createDeck("tech-1", {shuffled: true, hidden: true, facedown: true});
