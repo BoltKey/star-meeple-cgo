@@ -17,7 +17,10 @@ async function setup(gameSituation) {
     gameSituation.createComponent("pirate", {reward: "artifact"}),
     "pirate", 6
   );
-  
+  mainBoard.addComponent(
+    gameSituation.createComponent("pirate", {reward: "artifact"}),
+    "pirate", 6
+  );
   
   
   for (let player of gameSituation.getPlayers()) {
