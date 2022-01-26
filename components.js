@@ -294,109 +294,12 @@ let components = {
     "height": 400,
     "x": 50,
     "y": 32,
-    "positions": {
-      "dims": [
-        1000,
-        500
-      ],
-      "inventory": {
-        "accepts": [
-          "damage",
-          "artifact",
-          "pirate"
-        ],
-        "coords": [
-          {
-            "x": 50,
-            "y": 300
-          },
-          {
-            "x": 100,
-            "y": 300
-          },
-          {
-            "x": 150,
-            "y": 300
-          },
-          {
-            "x": 200,
-            "y": 300
-          },
-          {
-            "x": 250,
-            "y": 300
-          },
-          {
-            "x": 300,
-            "y": 300
-          },
-          {
-            "x": 350,
-            "y": 300
-          }
-        ]
-      },
-      "onDuty": {
-        "accepts": [
-          "meeple"
-        ],
-        "coords": {
-          "y": 50
-        }
-      },
-      "maintenance": {
-        "accepts": [
-          "meeple"
-        ],
-        "coords": {
-          "y": 50
-        }
-      },
-      "mission": {
-        "accepts": [
-          "meeple"
-        ],
-        "coords": {
-          "y": 150
-        }
-      },
-      "rooms": {
-        "accepts": [
-          "damage",
-          "meeple"
-        ],
-        "coords": [
-          {
-            "x": 200,
-            "y": 300
-          },
-          {
-            "x": 400,
-            "y": 300
-          },
-          {
-            "x": 600,
-            "y": 300
-          },
-          {
-            "x": 800,
-            "y": 200
-          },
-          {
-            "x": 600,
-            "y": 200
-          },
-          {
-            "x": 400,
-            "y": 200
-          },
-          {
-            "x": 200,
-            "y": 200
-          }
-        ]
-      }
-    }
+    "positions": {"dims":[1000,500],
+    "inventory":{"accepts":["damage","artifact","pirate"],"coords":[{"x":60,"y":454},{"x":150,"y":454},{"x":238,"y":454},{"x":325,"y":454},{"x":415,"y":454},{"x":502,"y":454},{"x":590,"y":454}]},
+    
+    "onDuty":{"accepts":["meeple"],"coords":{"y":50}},
+    
+    "maintenance":{"accepts":["meeple"],"coords":{"y":50}},"mission":{"accepts":["meeple"],"coords":{"y":150}},"rooms":{"accepts":["damage","meeple"],"coords":[{"x":237,"y":352},{"x":445,"y":348},{"x":653,"y":348},{"x":840,"y":250},{"x":655,"y":250},{"x":445,"y":250},{"x":236,"y":254}]}}
   },
   "playerTechBoard": {
     "image": "url(http://cloud-3.steamusercontent.com/ugc/1849291128389966059/D9A3B9894CF3CD0A246676031323485702F18804/)",
