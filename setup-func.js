@@ -23,9 +23,11 @@ async function setup(gameSituation) {
   for (let player of gameSituation.getPlayers()) {
     let playerBoard = gameSituation.createComponent("playerBoard");
     player.area.addComponent(playerBoard);
+    let techBoard = gameSituation.createComponent("playerTechBoard");
+    player.area.addComponent(techBoard);
     
     for (let i of [0, 1, 4, 5]) {
-      playerBoard.addComponent(gameSituation.createComponent("damage"), "tech", i);
+      techBoard.addComponent(gameSituation.createComponent("damage"), "techs", i);
     }
     
     for (let i of [4, 5, 6]) {
