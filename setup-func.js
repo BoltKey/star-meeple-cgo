@@ -41,13 +41,13 @@ async function setup(gameSituation) {
       playerBoard.addComponent(gameSituation.createComponent(
         "meeple", 
         {color: colors[i], level: 1}), 
-        "maintenance", 0
+        "maintenance", i
       );
       
       playerBoard.addComponent(gameSituation.createComponent(
         "meeple", 
         {color: colors[i], level: 1}), 
-        "onDuty", i);
+        "onDuty", 0);
     }
     player.setCounter("medals", 1);
     player.setCounter("score", 0);
