@@ -41,7 +41,7 @@ async function setup(gameSituation) {
       playerBoard.addComponent(gameSituation.createComponent(
         "meeple", 
         {color: colors[i], level: 1}), 
-        "maintenance", i
+        "maintenance", 0
       );
       
       playerBoard.addComponent(gameSituation.createComponent(
