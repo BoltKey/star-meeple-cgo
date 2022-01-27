@@ -147,7 +147,7 @@ let components = {
           "level": 1,
           "color": "red"
         },
-        "result": "url(http://cloud-3.steamusercontent.com/ugc/1818866545694781853/46C1D645F032517AA3F9C80A8160EA515D986F04/)"
+        "result": "url(http://cloud-3.steamusercontent.com/ugc/1818866545694778717/4B080AE604BD82713661749CC7109E80146B7174/)"
       },
       {
         "condition": {
