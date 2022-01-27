@@ -91,7 +91,7 @@ let components = {
     "onDuty":{"accepts":["meeple"],multi: true,"coords":[{"y":78, x: 420}]},
     
     "maintenance":{"accepts":["meeple"],"coords":[{"x":171,"y":75},{"x":219,"y":75},{"x":264,"y":75}]},
-    "mission":{"accepts":["meeple"],"coords":[{"y":175, "x": 190}]},"rooms":{"accepts":["damage","meeple"],"coords":[{"x":237,"y":352},{"x":445,"y":348},{"x":653,"y":348},{"x":840,"y":250},{"x":655,"y":250},{"x":445,"y":250},{"x":236,"y":254}]}}
+    "mission":{"accepts":["meeple"],multi: true,"coords":[{"y":175, "x": 190}]},"rooms":{"accepts":["damage","meeple"],"coords":[{"x":237,"y":352},{"x":445,"y":348},{"x":653,"y":348},{"x":840,"y":250},{"x":655,"y":250},{"x":445,"y":250},{"x":236,"y":254}]}}
   },
   "playerTechBoard": {
     "image": "url(http://cloud-3.steamusercontent.com/ugc/1849291128389966059/D9A3B9894CF3CD0A246676031323485702F18804/)",
