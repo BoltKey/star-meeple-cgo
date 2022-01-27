@@ -121,7 +121,7 @@ let components = {
     "type": "token",
     "width": 30,
     "height": 30,
-    "image": "red"
+    "image": "url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Red_Circle%28small%29.svg/2048px-Red_Circle%28small%29.svg.png)"
   },
   "meeple": {
     "type": "token",
