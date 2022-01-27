@@ -161,7 +161,7 @@ let components = {
           "level": 1,
           "color": "blue"
         },
-        "result": "blue"
+        "result": "url(http://cloud-3.steamusercontent.com/ugc/1818866545694781853/46C1D645F032517AA3F9C80A8160EA515D986F04/)"
       },
       {
         "condition": {
@@ -175,21 +175,21 @@ let components = {
           "level": 2,
           "color": "yellow"
         },
-        "result": "yellow"
+        "result": "url(http://cloud-3.steamusercontent.com/ugc/1818866545694780621/5A2031D5E1E90120EE5352386CD774DE9411E3A1/)"
       },
       {
         "condition": {
           "level": 2,
           "color": "blue"
         },
-        "result": "blue"
+        "result": "url(http://cloud-3.steamusercontent.com/ugc/1818866545694781853/46C1D645F032517AA3F9C80A8160EA515D986F04/)"
       },
       {
         "condition": {
           "level": 1,
           "color": "green"
         },
-        "result": "green"
+        "result": "url(http://cloud-3.steamusercontent.com/ugc/1768207004157223642/51CEAC356FD5AE622737E0E7518FD2B30C4F0274/)"
       },
       {
         "condition": {
