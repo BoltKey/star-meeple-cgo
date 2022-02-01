@@ -70,9 +70,9 @@ async function setup(gameSituation) {
   let techDeck = gameSituation.createDeck("tech-1", {shuffled: true, hidden: true, facedown: true});
   let techVpDeck = gameSituation.createDeck("tech-2", {shuffled: true, hidden: true, facedown: true});
   let missionDeck = gameSituation.createDeck("missions", {shuffled: true, hidden: true, facedown: true});
-  gameSituation.root.addComponent(techDeck);
-  gameSituation.root.addComponent(techVpDeck);
-  gameSituation.root.addComponent(missionDeck);
+  gameSituation.root.addComponent(techDeck, "decks", 0);
+  gameSituation.root.addComponent(techVpDeck, "decks", 1);
+  gameSituation.root.addComponent(missionDeck, "decks", 2);
   
   let techSupply = gameSituation.createComponent("techSupply");
   gameSituation.root.addComponent(techSupply);
