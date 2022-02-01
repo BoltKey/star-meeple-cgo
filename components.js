@@ -281,7 +281,7 @@ let components = {
         1000,
         1000
       ],
-      "decks": {accepts: ["deck"], coords: [{"x": 600, "y": 400}, {"x": 600, "y": 500}, {"x": 600, "y": 600}]}
+      "decks": {accepts: ["deck"], coords: [{"x":600,"y":550},{"x":750,"y":550},{"x":600,"y":650}]}
     }
   },
   "player-area": {
