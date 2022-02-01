@@ -36,6 +36,9 @@ async function setup(gameSituation) {
     for (let i of [4, 5, 6]) {
       playerBoard.addComponent(gameSituation.createComponent("damage"), "inventory", i);
     }
+    for (let i of [0, 1, 2]) {
+      playerBoard.addComponent(gameSituation.createComponent("damage"), "rooms", i);
+    }
     let colors = ["red", "yellow", "blue"];
     for (let i = 0; i < 3; ++i) {
       playerBoard.addComponent(gameSituation.createComponent(
