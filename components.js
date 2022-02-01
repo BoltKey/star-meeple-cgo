@@ -88,7 +88,7 @@ let components = {
     "positions": {"dims":[1000,500],
     "inventory":{"accepts":["damage","artifact","pirate"],"coords":[{"x":60,"y":454},{"x":150,"y":454},{"x":238,"y":454},{"x":325,"y":454},{"x":415,"y":454},{"x":502,"y":454},{"x":590,"y":454}]},
     
-    "onDuty":{"accepts":["meeple"],multi: true,"gapSize": 40,"coords":[{"y":78, x: 420}]},
+    "onDuty":{"accepts":["meeple"],"multi":true,"gapSize":30,"coords":[{"y":78,"x":620}]},
     
     "maintenance":{"accepts":["meeple"],"coords":[{"x":171,"y":75},{"x":219,"y":75},{"x":264,"y":75}]},
     "mission":{"accepts":["meeple"],multi: true,"coords":[{"y":175, "x": 190}]},"rooms":{"accepts":["damage","meeple"],"coords":[{"x":237,"y":352},{"x":445,"y":348},{"x":653,"y":348},{"x":840,"y":250},{"x":655,"y":250},{"x":445,"y":250},{"x":236,"y":254}]}}
