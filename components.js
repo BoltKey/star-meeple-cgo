@@ -239,7 +239,6 @@ let components = {
     ]
   },
   "pirateBag": {
-    "type": "bag",
     "left": 300,
     "top": 300,
     "width": 100,
