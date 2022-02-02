@@ -252,6 +252,8 @@ let components = {
   },
   "artifact": {
     "type": "token",
+    width: 40,
+    height: 40,
     "variables": {
       "color": [
         "redyellow",
