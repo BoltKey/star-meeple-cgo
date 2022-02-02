@@ -66,6 +66,12 @@ async function setup(gameSituation) {
   for (let i = 0; i < artPirateAmt; ++i) {
     pirateSupply.addComponent(gameSituation.createComponent("pirate", {reward: "artifact"}));
   }
+  let artifactSupply = gameSituation.root.addComponent(gameSituation.createBank("pirateBag", {random: true, infinite: false}), "decks", 3);
+  for (let artType of ["redblue", "blueyellow", "redyellow"]) {
+    for (let i = 0; i < 8; ++i) {
+      artifactSupply.addComponent(gameSituation.createComponent("artifact", {color: artType}));
+    }
+  }
   
   let techDeck = gameSituation.createDeck("tech-1", {shuffled: true, hidden: true, facedown: true});
   let techVpDeck = gameSituation.createDeck("tech-2", {shuffled: true, hidden: true, facedown: true});
