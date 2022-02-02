@@ -56,7 +56,7 @@ async function setup(gameSituation) {
     player.setCounter("score", 0);
   }
   
-  let pirateSupply = mainBoard.addComponent(gameSituation.createComponent("pirateBag"));
+  let pirateSupply = gameSituatio.root.addComponent(gameSituation.createBank("pirateBag", {random: true, infinite: false}));
   
   const androidPirateAmt = 10;
   const artPirateAmt = 10;
