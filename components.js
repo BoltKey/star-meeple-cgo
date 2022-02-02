@@ -14,6 +14,17 @@ let components = {
     "green",
     "yellow"
   ],
+  "root": {
+    "height": 800,
+    "width": 1200,
+    "positions": {
+      "dims": [
+        1000,
+        1000
+      ],
+      "decks": {accepts: ["deck"], coords: [{"x":600,"y":550},{"x":750,"y":550},{"x":600,"y":650},{"x": 600, "y": 650}]}
+    }
+  },
   "mainBoard": {
     "type": "board",
     "image": "url(http://cloud-3.steamusercontent.com/ugc/1839158662086900345/2ADAF68268E081B5D90A7E3DCD58DC81BBC30270/)",
@@ -273,17 +284,7 @@ let components = {
     "height": 40,
     "image": "black"
   },
-  "root": {
-    "height": 800,
-    "width": 1200,
-    "positions": {
-      "dims": [
-        1000,
-        1000
-      ],
-      "decks": {accepts: ["deck"], coords: [{"x":600,"y":550},{"x":750,"y":550},{"x":600,"y":650}]}
-    }
-  },
+  
   "player-area": {
     "width": 800,
     "height": 600,
