@@ -73,6 +73,11 @@ async function setup(gameSituation) {
     }
   }
   
+  let damageSupply = gameSituation.root.addComponent(gameSituation.createBank("damageBag", {infinite: false}), "decks", 5);
+  for (let i = 0; i < 30; ++i) {
+    damageSupply.addComponent(gameSituation.createComponent("damage"));
+  }
+  
   let techDeck = gameSituation.createDeck("tech-1", {shuffled: true, hidden: true, facedown: true});
   let techVpDeck = gameSituation.createDeck("tech-2", {shuffled: true, hidden: true, facedown: true});
   let missionDeck = gameSituation.createDeck("missions", {shuffled: true, hidden: true, facedown: true});
