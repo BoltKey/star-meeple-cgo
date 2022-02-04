@@ -89,7 +89,7 @@ let components = {
       "meeple": {
         "accepts": ["meeple"],
         multi: true,
-        gapSize: 35,
+        gapSize: 30,
         "coords": [
         {x: 32, y: 444},
         {x: 94, y: 444},
