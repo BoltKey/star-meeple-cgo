@@ -99,7 +99,7 @@ async function setup(gameSituation) {
   }
   for (var round = 0; round < 4; ++round) {
     for (var p = 0; p < gameSituation.getPlayers().length; ++p) {
-      techSupply.addComponent(gameSituation.createComponent("meeple", {color: "gray", level: "ensign"}));
+      techSupply.addComponent(gameSituation.createComponent("meeple", {color: "gray", level: "ensign"}), "meeple", round);
     }
   }
   return 0;
