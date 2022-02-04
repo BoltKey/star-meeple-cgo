@@ -186,7 +186,7 @@ let components = {
           "level": "officer",
           "color": "yellow"
         },
-        "result": "url(https://storage.googleapis.com/cgo-deck-assets/star-meeple/redoff.png)"
+        "result": "url(https://storage.googleapis.com/cgo-deck-assets/star-meeple/yellowoff.png)"
       },
       {
         "condition": {
