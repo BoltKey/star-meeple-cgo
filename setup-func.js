@@ -78,6 +78,11 @@ async function setup(gameSituation) {
     damageSupply.addComponent(gameSituation.createComponent("damage"));
   }
   
+  let androidSupply = gameSituation.root.addComponent(gameSituation.createBank("androidBag", {infinite: false, contentNames: ["meeple"]}), "decks", 6);
+  for (let i = 0; i < 30; ++i) {
+    androidSupply.addComponent(gameSituation.createComponent("meeple", {color: "green", level: "ensign"}));
+  }
+  
   let techDeck = gameSituation.createDeck("tech-1", {shuffled: true, hidden: true, facedown: true});
   let techVpDeck = gameSituation.createDeck("tech-2", {shuffled: true, hidden: true, facedown: true});
   let missionDeck = gameSituation.createDeck("missions", {shuffled: true, hidden: true, facedown: true});
