@@ -141,8 +141,8 @@ let components = {
     "height": 30,
     "variables": {
       "level": [
-        1,
-        2
+        "ensign",
+        "officer"
       ],
       "color": [
         "gray",
@@ -155,56 +155,54 @@ let components = {
     "image": [
       {
         "condition": {
-          "level": 1,
+          "level": "ensign",
           "color": "red"
         },
         "result": "url(http://cloud-3.steamusercontent.com/ugc/1818866545694778717/4B080AE604BD82713661749CC7109E80146B7174/)"
       },
       {
         "condition": {
-          "level": 1,
+          "level": "ensign",
           "color": "yellow"
         },
         "result": "url(http://cloud-3.steamusercontent.com/ugc/1818866545694780621/5A2031D5E1E90120EE5352386CD774DE9411E3A1/)"
       },
       {
         "condition": {
-          "level": 1,
+          "level": "ensign",
           "color": "blue"
         },
         "result": "url(http://cloud-3.steamusercontent.com/ugc/1818866545694781853/46C1D645F032517AA3F9C80A8160EA515D986F04/)"
       },
       {
         "condition": {
-          "level": 2,
+          "level": "officer",
           "color": "red"
         },
         "result": "url(http://cloud-3.steamusercontent.com/ugc/1818866545694781853/46C1D645F032517AA3F9C80A8160EA515D986F04/)"
       },
       {
         "condition": {
-          "level": 2,
+          "level": "officer",
           "color": "yellow"
         },
         "result": "url(http://cloud-3.steamusercontent.com/ugc/1818866545694780621/5A2031D5E1E90120EE5352386CD774DE9411E3A1/)"
       },
       {
         "condition": {
-          "level": 2,
+          "level": "officer",
           "color": "blue"
         },
         "result": "url(http://cloud-3.steamusercontent.com/ugc/1818866545694781853/46C1D645F032517AA3F9C80A8160EA515D986F04/)"
       },
       {
         "condition": {
-          "level": 1,
           "color": "green"
         },
         "result": "url(http://cloud-3.steamusercontent.com/ugc/1768207004157223642/51CEAC356FD5AE622737E0E7518FD2B30C4F0274/)"
       },
       {
         "condition": {
-          "level": 1,
           "color": "gray"
         },
         "result": "url(http://cloud-3.steamusercontent.com/ugc/1818866545694790478/B35232C64A2BF8E0F44521B0CE330B42B46DA886/)"
