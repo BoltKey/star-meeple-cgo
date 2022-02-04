@@ -128,7 +128,7 @@ let components = {
     positions: {
       "dims": [100, 2],
       "techs": {
-        "accepts": ["damage", "tech-1", "tech-2"],
+        "accepts": ["damage", "tech-1", "tech-2", "card"],
         coords: [
         {"x":10,"y":1},
         {"x":26,"y":1},
