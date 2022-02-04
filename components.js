@@ -22,7 +22,7 @@ let components = {
         1000,
         1000
       ],
-      "decks": {accepts: ["deck"], coords: [{"x":600,"y":550},{"x":750,"y":550},{"x":600,"y":650},{"x": 750, "y": 800},{"x": 750, "y": 900}, {"x": 750, "y": 1000}]}
+      "decks": {accepts: ["deck", "bank"], coords: [{"x":600,"y":550},{"x":750,"y":550},{"x":600,"y":650},{"x": 750, "y": 800},{"x": 750, "y": 900}, {"x": 750, "y": 1000}]}
     }
   },
   "mainBoard": {
@@ -141,7 +141,6 @@ let components = {
     "height": 30,
     "variables": {
       "level": [
-        0,
         1,
         2
       ],
@@ -205,7 +204,7 @@ let components = {
       },
       {
         "condition": {
-          "level": 0,
+          "level": 1,
           "color": "gray"
         },
         "result": "url(http://cloud-3.steamusercontent.com/ugc/1818866545694790478/B35232C64A2BF8E0F44521B0CE330B42B46DA886/)"
