@@ -85,6 +85,12 @@ let components = {
             "y": 100
           }
         ]
+      },
+      "meeple": {
+        "accepts": ["meeple"],
+        "coords": [
+        {x: 30, y: 430}
+        ]
       }
     },
     "scaleMult": 0.46
