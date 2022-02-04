@@ -88,8 +88,12 @@ let components = {
       },
       "meeple": {
         "accepts": ["meeple"],
+        multi: true,
         "coords": [
-        {x: 30, y: 430}
+        {x: 30, y: 444},
+        {x: 130, y: 444},
+        {x: 230, y: 444},
+        {x: 330, y: 444}
         ]
       }
     },
