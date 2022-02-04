@@ -215,7 +215,7 @@ let components = {
     "variables": {
       "reward": [
         "artifact",
-        "pirate"
+        "android"
       ]
     },
     "width": 40,
