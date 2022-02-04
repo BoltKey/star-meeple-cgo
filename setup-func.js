@@ -98,7 +98,7 @@ async function setup(gameSituation) {
     mainBoard.addComponent(missionDeck.drawCard(), "mission", i)
   }
   for (var round = 0; round < 4; ++round) {
-    for (var p = 0; p < gameSituation.getPlayers().length) {
+    for (var p = 0; p < gameSituation.getPlayers().length; ++p) {
       techSupply.addComponent(gameSituation.createComponent("meeple", {color: "gray", level: "ensign"}));
     }
   }
