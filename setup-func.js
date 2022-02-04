@@ -43,13 +43,13 @@ async function setup(gameSituation) {
     for (let i = 0; i < 3; ++i) {
       playerBoard.addComponent(gameSituation.createComponent(
         "meeple", 
-        {color: colors[i], level: 1}), 
+        {color: colors[i], level: "ensign"}), 
         "maintenance", i
       );
       
       playerBoard.addComponent(gameSituation.createComponent(
         "meeple", 
-        {color: colors[i], level: 1}), 
+        {color: colors[i], level: "ensign"}), 
         "onDuty", 0);
     }
     player.setCounter("medals", 1);
