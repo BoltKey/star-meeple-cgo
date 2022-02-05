@@ -6,7 +6,7 @@ let components = {
   "baseScale": 0.3,
   "__playerArea": {
     "width": 800,
-    "height": 600
+    "height": 900
   },
   "__playerOrder": ["red", "green", "blue", "yellow"],
   "root": {
