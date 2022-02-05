@@ -266,8 +266,8 @@ let components = {
         "multi": true,
         "coords": [
           {
-            "y": 390,
-            "x": 320
+            "x": 390,
+            "y": 320,
           }
         ]
       },
