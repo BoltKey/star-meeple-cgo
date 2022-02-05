@@ -15,7 +15,7 @@ async function setup(gameSituation) {
   
   let piratePositions = [0, 7, 13, 20, 21];
   for (let index of piratePositions) {
-    mainBoard.addComponent(pirateSupply.getComponent(), "pirate", 8);
+    mainBoard.addComponent(pirateSupply.getComponent(), "pirate", index);
   }
   
   
