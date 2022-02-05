@@ -92,6 +92,7 @@ let components = {
       },
       "playerShip": {
         "multi": true,
+        gapSize: 20,
         "accepts": [
           "playerShip"
         ],
@@ -619,7 +620,7 @@ let components = {
     "variables": {
       "color": ["red", "green", "blue", "yellow"]
     },
-    "width": 40,
+    "width": 30,
     "height": 40,
     "image": [{
       "condition": {"color": "red"},
