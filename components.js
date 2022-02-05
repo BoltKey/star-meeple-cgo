@@ -353,7 +353,7 @@ let components = {
   },
   "playerBoard": {
     "type": "board",
-    "image": "url(http://cloud-3.steamusercontent.com/ugc/1849290583449527719/3948B0CD3D95D1123E02B1732798501EE7075E1F/)",
+    "image": "url(http://cloud-3.steamusercontent.com/ugc/1839159157677242297/01B2B62042121E4D01A73BC8E0630C16AEC72A2C/)",
     "width": 800,
     "height": 400,
     "selectable": false,
