@@ -86,9 +86,15 @@ async function setup(gameSituation) {
     techSupply.addComponent(techVpDeck.drawCard(), "tech", i);
   }
   
-  let allPositions = [];
-  for (var i = 0; i < 7; ++i) {
-    mainBoard.addComponent(missionDeck.drawCard(), "mission", i)
+  let allPositions = [...array(13).keys()];
+  let missionPositions = [];
+  for (let i = 0; i < 6; ++i) {
+    let j = Math.floor(Math.random() * allPositions.length);
+    missionPositions.push(allPositions[j]);
+    allPositions.splice(j, 1);
+  }
+  for (let position of missionPositions) {
+    mainBoard.addComponent(missionDeck.drawCard(), "mission", position)
   }
   for (var round = 0; round < 4; ++round) {
     for (var p = 0; p < gameSituation.getPlayers().length; ++p) {
