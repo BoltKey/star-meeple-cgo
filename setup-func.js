@@ -105,7 +105,7 @@ async function setup(gameSituation) {
   let tokens = ["1", "2", "3", "4", "5", "android", "artifact"];
   for (let i in tokenPositions) {
     let position = tokenPositions[i];
-    mainBoard.addComponent(gameSituation.createComponent("planetToken", {meaning: tokens[i]}), "mission", position);
+    mainBoard.addComponent(gameSituation.createComponent("planetToken", {meaning: tokens[i], side: "orange"}), "mission", position);
   }
   for (var round = 0; round < 4; ++round) {
     for (var p = 0; p < gameSituation.getPlayers().length; ++p) {
