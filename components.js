@@ -621,7 +621,7 @@ let components = {
     ],
     "width": 40,
     "height": 40,
-    "image": {[{
+    "image": [{
       "condition": {"color": "red"},
       "result": "url(https://storage.googleapis.com/cgo-deck-assets/star-meeple/player-red.png)"
       },
@@ -638,7 +638,7 @@ let components = {
       "result": "url(https://storage.googleapis.com/cgo-deck-assets/star-meeple/player-yellow.png)"
       }
       ]
-    },
+    ,
   },
   "player-area": {
     "width": 800,
