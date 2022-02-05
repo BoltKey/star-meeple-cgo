@@ -293,7 +293,7 @@ let components = {
     "height": 400,
     "selectable": false,
     "x": 50,
-    "y": 32,
+    "y": 25,
     "positions": {
       "dims": [
         1000,
@@ -375,8 +375,8 @@ let components = {
         "multi": true,
         "coords": [
           {
-            "y": 175,
-            "x": 190
+            "y": 390,
+            "x": 320
           }
         ]
       },
@@ -386,15 +386,7 @@ let components = {
           "meeple"
         ],
         "multi": "true",
-        "coords": [
-          {x: 857, y: 225},
-          {x: 807, y: 225},
-          {x: 757, y: 225},
-          {x: 707, y: 225},
-          {x: 657, y: 225},
-          {x: 607, y: 225},
-          {x: 557, y: 225},
-        ]
+        "coords": [{"x":857,"y":225},{"x":699,"y":225},{"x":610,"y":225},{"x":489,"y":225},{"x":403,"y":225},{"x":280,"y":225},{"x":193,"y":225}]
       }
     }
   },
@@ -403,7 +395,7 @@ let components = {
     "width": 800,
     "height": 190,
     "x": 50,
-    "y": 70,
+    "y": 65,
     "selectable": false,
     "scaleMult": 0.55,
     "positions": {
