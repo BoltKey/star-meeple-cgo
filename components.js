@@ -8,12 +8,7 @@ let components = {
     "width": 800,
     "height": 600
   },
-  "__playerOrder": [
-    "red",
-    "blue",
-    "green",
-    "yellow"
-  ],
+  "__playerOrder": ["red", "green", "blue", "yellow"],
   "root": {
     "height": 800,
     "width": 1200,
