@@ -72,8 +72,8 @@ async function setup(gameSituation) {
     androidSupply.addComponent(gameSituation.createComponent("meeple", {color: "green", level: "ensign"}));
   }
   
-  let techDeck = gameSituation.createDeck("tech-1", {shuffled: true, hidden: true, facedown: true});
-  let techVpDeck = gameSituation.createDeck("tech-2", {shuffled: true, hidden: true, facedown: true});
+  let techDeck = gameSituation.createDeck("tech-1", {shuffled: true, hidden: true, facedown: true, condition: {"scoring": "yes"}});
+  let techVpDeck = gameSituation.createDeck("tech-2", {shuffled: true, hidden: true, facedown: true, condition: {"scoring": "yes"}});
   let missionDeck = gameSituation.createDeck("missions", {shuffled: true, hidden: true, facedown: true});
   gameSituation.root.addComponent(techDeck, "decks", 0);
   gameSituation.root.addComponent(techVpDeck, "decks", 1);
