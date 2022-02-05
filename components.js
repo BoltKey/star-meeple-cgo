@@ -92,7 +92,7 @@ let components = {
       },
       "playerShip": {
         "multi": true,
-        gapSize: 20,
+        gapSize: 10,
         "accepts": [
           "playerShip"
         ],
