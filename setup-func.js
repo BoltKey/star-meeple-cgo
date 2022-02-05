@@ -1,6 +1,6 @@
 async function setup(gameSituation) {
   let mainBoard = gameSituation.createComponent("mainBoard");
-  gameSituation.root.addComponent(mainBoard);
+  
   
   let pirateSupply = gameSituation.root.addComponent(gameSituation.createBank("pirateBag", {random: true, infinite: false, contentNames: ["pirate"]}), "decks", 3);
   
@@ -95,6 +95,8 @@ async function setup(gameSituation) {
       techSupply.addComponent(gameSituation.createComponent("meeple", {color: "gray", level: "ensign"}), "meeple", round);
     }
   }
+  
+  gameSituation.root.addComponent(mainBoard);  // last so mission tooltips display at top
   return 0;
 }
 
