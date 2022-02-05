@@ -621,7 +621,24 @@ let components = {
     ],
     "width": 40,
     "height": 40,
-    "image": "black"
+    "image": {[{
+      "condition": {"color": "red"},
+      "result": "url(https://storage.googleapis.com/cgo-deck-assets/star-meeple/player-red.png)"
+      },
+      {
+      "condition": {"color": "blue"},
+      "result": "url(https://storage.googleapis.com/cgo-deck-assets/star-meeple/player-blue.png)"
+      },
+      {
+      "condition": {"color": "green"},
+      "result": "url(https://storage.googleapis.com/cgo-deck-assets/star-meeple/player-green.png)"
+      },
+      {
+      "condition": {"color": "yellow"},
+      "result": "url(https://storage.googleapis.com/cgo-deck-assets/star-meeple/player-yellow.png)"
+      }
+      ]
+    },
   },
   "player-area": {
     "width": 800,

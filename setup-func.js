@@ -50,6 +50,8 @@ async function setup(gameSituation) {
     }
     player.setCounter("medals", 1);
     player.setCounter("score", 0);
+    
+    mainBoard.addComponent(gameSituation.createComponent("playerShip", {"color": player.color}));
   }
   
   
