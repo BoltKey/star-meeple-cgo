@@ -1,26 +1,22 @@
 async function setup(gameSituation) {
   let mainBoard = gameSituation.createComponent("mainBoard");
   gameSituation.root.addComponent(mainBoard);
-  mainBoard.addComponent(
-    gameSituation.createComponent("pirate", {reward: "android"}),
-    "pirate", 8
-  );
-  mainBoard.addComponent(
-    gameSituation.createComponent("pirate", {reward: "android"}),
-    "pirate", 2
-  );
-  mainBoard.addComponent(
-    gameSituation.createComponent("pirate", {reward: "artifact"}),
-    "pirate", 4
-  );
-  mainBoard.addComponent(
-    gameSituation.createComponent("pirate", {reward: "artifact"}),
-    "pirate", 6
-  );
-  mainBoard.addComponent(
-    gameSituation.createComponent("pirate", {reward: "artifact"}),
-    "pirate", 6
-  );
+  
+  let pirateSupply = gameSituation.root.addComponent(gameSituation.createBank("pirateBag", {random: true, infinite: false, contentNames: ["pirate"]}), "decks", 3);
+  
+  const androidPirateAmt = 10;
+  const artPirateAmt = 10;
+  for (let i = 0; i < androidPirateAmt; ++i) {
+    pirateSupply.addComponent(gameSituation.createComponent("pirate", {reward: "android"}));
+  }
+  for (let i = 0; i < artPirateAmt; ++i) {
+    pirateSupply.addComponent(gameSituation.createComponent("pirate", {reward: "artifact"}));
+  }
+  
+  let piratePositions = [0, 7, 13, 20, 21];
+  for (let index of piratePositions) {
+    mainBoard.addComponent(pirateSupply.getComponent(), "pirate", 8);
+  }
   
   
   for (let player of gameSituation.getPlayers()) {
@@ -56,16 +52,7 @@ async function setup(gameSituation) {
     player.setCounter("score", 0);
   }
   
-  let pirateSupply = gameSituation.root.addComponent(gameSituation.createBank("pirateBag", {random: true, infinite: false, contentNames: ["pirate"]}), "decks", 3);
   
-  const androidPirateAmt = 10;
-  const artPirateAmt = 10;
-  for (let i = 0; i < androidPirateAmt; ++i) {
-    pirateSupply.addComponent(gameSituation.createComponent("pirate", {reward: "android"}));
-  }
-  for (let i = 0; i < artPirateAmt; ++i) {
-    pirateSupply.addComponent(gameSituation.createComponent("pirate", {reward: "artifact"}));
-  }
   let artifactSupply = gameSituation.root.addComponent(gameSituation.createBank("artifactBag", {random: true, infinite: false, contentNames: ["artifact"]}), "decks", 4);
   for (let artType of ["redblue", "blueyellow", "redyellow"]) {
     for (let i = 0; i < 8; ++i) {
