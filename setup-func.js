@@ -86,7 +86,7 @@ async function setup(gameSituation) {
     techSupply.addComponent(techVpDeck.drawCard(), "tech", i);
   }
   
-  let allPositions = [...array(13).keys()];
+  let allPositions = [...Array(13).keys()];
   let missionPositions = [];
   for (let i = 0; i < 6; ++i) {
     let j = Math.floor(Math.random() * allPositions.length);
