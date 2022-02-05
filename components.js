@@ -333,6 +333,7 @@ let components = {
           "missions"
         ],
         "multi": true,
+        "gapSize": -40,
         "coords": [
           {
             "y": 3,
