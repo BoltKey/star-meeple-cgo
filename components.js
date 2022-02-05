@@ -86,7 +86,7 @@ let components = {
       "mission": {
         "accepts": [
           "missions",
-          "card"
+          "planetToken"
         ],
         "coords": [{"x":155,"y":75},{"x":470,"y":110},{"x":820,"y":100},{"x":190,"y":310},{"x":565,"y":390},{"x":890,"y":310},{"x":770,"y":480},{"x":195,"y":535},{"x":440,"y":660},{"x":765,"y":668},{"x":145,"y":890},{"x":550,"y":928},{"x":865,"y":910}]
       },
@@ -508,6 +508,65 @@ let components = {
           "reward": "artifact"
         },
         "result": "url(http://cloud-3.steamusercontent.com/ugc/1849290583451239800/D71378D58B51D5F28FEE18D3CDF7FE461A00848A/)"
+      }
+    ]
+  },
+  "planetToken": {
+    "type": "token",
+    "variables": {
+      "meaning": ["1", "2", "3", "4", "5", "artifact", "android"],
+      "side": ["orange", "gray"]
+    },
+    width: 100,
+    height: 100,
+    "image": [
+      {
+        "condition": {"meaning": "1", "side": "orange"},
+        "result": "url(http://cloud-3.steamusercontent.com/ugc/1839159157677235250/46B720363489605CE33B6C3B818C2B56CAF3A80C/)"
+      },
+      {
+        "condition": {"meaning": "1", "side": "gray"},
+        "result": "url(http://cloud-3.steamusercontent.com/ugc/1839159157677236468/516A9296B6F6C40A37536F6A375D930903C60C70/)"
+      },
+      {
+        "condition": {"meaning": "2", "side": "orange"},
+        "result": "url(http://cloud-3.steamusercontent.com/ugc/1839159157677237196/6758F603020F16C5F1513EA53120C1BA893142A0/)"
+      },
+      {
+        "condition": {"meaning": "2", "side": "gray"},
+        "result": "url(http://cloud-3.steamusercontent.com/ugc/1839159157677237496/885AD3213F306EFD64F2CD3C45D315CDACCD40B5/)"
+      },
+      {
+        "condition": {"meaning": "3", "side": "orange"},
+        "result": "url(http://cloud-3.steamusercontent.com/ugc/1839159157677238227/295B38758620CC6066902DC881E45BFC3CE35D13/)"
+      },
+      {
+        "condition": {"meaning": "3", "side": "gray"},
+        "result": "url(http://cloud-3.steamusercontent.com/ugc/1839159157677238644/E59030C1D9DE50C52E0CC595967A3E3833882089/)"
+      },
+      {
+        "condition": {"meaning": "4", "side": "orange"},
+        "result": "url(http://cloud-3.steamusercontent.com/ugc/1839159157677239233/B3D477AA7928CCE74E90EDBB642EDDDF5499F6CE/)"
+      },
+      {
+        "condition": {"meaning": "4", "side": "gray"},
+        "result": "url(http://cloud-3.steamusercontent.com/ugc/1839159157677239580/AAB68B560B8EBC6126A68FF60A5545C1AB8DAD96/)"
+      },
+      {
+        "condition": {"meaning": "5", "side": "orange"},
+        "result": "url(http://cloud-3.steamusercontent.com/ugc/1839159157677240150/AC3992957D667166C244803BA2BCC842107A0478/)"
+      },
+      {
+        "condition": {"meaning": "5", "side": "gray"},
+        "result": "url(http://cloud-3.steamusercontent.com/ugc/1839159157677240470/DAC8EDBFA958989C72BEC8AD8EFF551238912BA0/)"
+      },
+      {
+        "condition": {"meaning": "artifact"},
+        "result": "url(http://cloud-3.steamusercontent.com/ugc/1839158662087120443/49A4E2988BF80870B6CBC925FFE39B990747EE55/)"
+      },
+      {
+        "condition": {"meaning": "android"},
+        "result": "url(http://cloud-3.steamusercontent.com/ugc/1839158662087121422/55098611C5F01EC53269C2E06B18169410187ABC/)"
       }
     ]
   },

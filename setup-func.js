@@ -93,8 +93,19 @@ async function setup(gameSituation) {
     missionPositions.push(allPositions[j]);
     allPositions.splice(j, 1);
   }
+  let tokenPositions = [];
+  for (let i = 0; i < 7; ++i) {
+    let j = Math.floor(Math.random() * allPositions.length);
+    tokenPositions.push(allPositions[j]);
+    allPositions.splice(j, 1);
+  }
   for (let position of missionPositions) {
     mainBoard.addComponent(missionDeck.drawCard(), "mission", position)
+  }
+  let tokens = ["1", "2", "3", "4", "5", "android", "artifact"];
+  for (let i in tokenPositions) {
+    let position = tokenPositions[i];
+    mainBoard.addComponent(gameSituation.createComponent("planetToken", {meaning: tokens[i]}));
   }
   for (var round = 0; round < 4; ++round) {
     for (var p = 0; p < gameSituation.getPlayers().length; ++p) {
