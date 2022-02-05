@@ -616,9 +616,9 @@ let components = {
   },
   "playerShip": {
     "type": "token",
-    "variables": [
-      "color"
-    ],
+    "variables": {
+      "color": ["red", "green", "blue", "yellow"]
+    },
     "width": 40,
     "height": 40,
     "image": [{
