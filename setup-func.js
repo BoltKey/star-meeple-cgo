@@ -99,6 +99,7 @@ async function setup(gameSituation) {
     techSupply.addComponent(techVpDeck.drawCard(), "tech", i);
   }
   
+  let allPositions = [];
   for (var i = 0; i < 7; ++i) {
     mainBoard.addComponent(missionDeck.drawCard(), "mission", i)
   }

@@ -63,7 +63,7 @@ let components = {
   },
   "mainBoard": {
     "type": "board",
-    "image": "url(http://cloud-3.steamusercontent.com/ugc/1839158662086900345/2ADAF68268E081B5D90A7E3DCD58DC81BBC30270/)",
+    "image": "url(http://cloud-3.steamusercontent.com/ugc/1835782295709379051/84CD2C192B91890C9E8AE21B4456BAE12061E853/)",
     "x": 300,
     "y": 480,
     "width": 700,
