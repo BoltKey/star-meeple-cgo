@@ -4,13 +4,13 @@ async function setup(gameSituation) {
   
   let pirateSupply = gameSituation.root.addComponent(gameSituation.createBank("pirateBag", {random: true, infinite: false, contentNames: ["pirate"]}), "decks", 3);
   
-  const androidPirateAmt = 10;
-  const artPirateAmt = 10;
-  for (let i = 0; i < androidPirateAmt; ++i) {
-    pirateSupply.addComponent(gameSituation.createComponent("pirate", {reward: "android"}));
-  }
-  for (let i = 0; i < artPirateAmt; ++i) {
-    pirateSupply.addComponent(gameSituation.createComponent("pirate", {reward: "artifact"}));
+  const eachPirateAmt = 4;
+  for (let color of ["green", "purple", "yellow"]) {
+    for (let reward of ["android", "artifact"]) {
+      for (let i = 0; i < eachPirateAmt; ++i) {
+        pirateSupply.addComponent(gameSituation.createComponent("pirate", {reward, color}));
+      }
+    }
   }
   
   let piratePositions = [0, 7, 13, 20, 21];

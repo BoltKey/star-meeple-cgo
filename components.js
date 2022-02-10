@@ -437,15 +437,39 @@ let components = {
     "image": [
       {
         "condition": {
-          "reward": "android"
+          "reward": "android", "color": "green"
         },
-        "result": "url(http://cloud-3.steamusercontent.com/ugc/1849290583451236935/E2F0837FD6E833E3C78D6C07487760730E43E288/)"
+        "result": "url(http://cloud-3.steamusercontent.com/ugc/1839158662086912384/D16F0633CEDD67491160BB5D875F43303274944B/)"
       },
       {
         "condition": {
-          "reward": "artifact"
+          "reward": "android", "color": "yellow"
         },
-        "result": "url(http://cloud-3.steamusercontent.com/ugc/1849290583451239800/D71378D58B51D5F28FEE18D3CDF7FE461A00848A/)"
+        "result": "url(http://cloud-3.steamusercontent.com/ugc/1839158662086912911/7B5C76B816A1B2E764DD6DA38AF33B4D55F1C807/)"
+      },
+      {
+        "condition": {
+          "reward": "android", "color": "purple"
+        },
+        "result": "url(http://cloud-3.steamusercontent.com/ugc/1839158662086911897/422B8DC6FC3CB914EA78AE2E71BD905449A5664A/)"
+      },
+      {
+        "condition": {
+          "reward": "artifact", "color": "green"
+        },
+        "result": "url(http://cloud-3.steamusercontent.com/ugc/1839158662086910814/747380DE4FD63DB129856F3AD0CD2FC1F7DE8887/)"
+      },
+      {
+        "condition": {
+          "reward": "artifact", "color": "yellow"
+        },
+        "result": "url(http://cloud-3.steamusercontent.com/ugc/1839158662086910255/77A5A2E7BCAD394F9A1BED73940E19DF75193422/)"
+      },
+      {
+        "condition": {
+          "reward": "artifact", "color": "purple"
+        },
+        "result": "url(http://cloud-3.steamusercontent.com/ugc/1839158662086911367/B200E45A0D1E8BBF8A976114786981FAF6999046/)"
       }
     ]
   },
