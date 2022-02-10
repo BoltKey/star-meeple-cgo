@@ -433,8 +433,8 @@ let components = {
         "android"
       ]
     },
-    "width": 40,
-    "height": 40,
+    "width": 30,
+    "height": 30,
     "image": [
       {
         "condition": {
