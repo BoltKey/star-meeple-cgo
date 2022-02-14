@@ -6,7 +6,9 @@
   "baseScale": 0.3,
   "__playerArea": {
     "width": 800,
-    "height": 800
+    "height": 800,
+    "x": 800,
+    "y": 30,
   },
   "__playerOrder": [
     "red",
