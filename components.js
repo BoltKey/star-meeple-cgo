@@ -16,7 +16,7 @@ let components = {
   ],
   "root": {
     "height": 800,
-    "width": 1200,
+    "width": 1600,
     "positions": {
       "dims": [
         1000,
