@@ -466,7 +466,7 @@ let components = {
           "meeple"
         ],
         "multi": true,
-        "gapSize": -30,
+        "gapSize": 30,
         "coords": [
           {
             "x": 390,
