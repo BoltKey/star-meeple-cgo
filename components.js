@@ -1,4 +1,4 @@
-let components = {
+{
   "dims": [
     1000,
     1000
@@ -15,7 +15,7 @@ let components = {
     "yellow"
   ],
   "root": {
-    "height": 800,
+    "height": 1200,
     "width": 1600,
     "positions": {
       "dims": [
@@ -64,8 +64,8 @@ let components = {
   "mainBoard": {
     "type": "board",
     "image": "url(http://cloud-3.steamusercontent.com/ugc/1835782295709379051/84CD2C192B91890C9E8AE21B4456BAE12061E853/)",
-    "x": 300,
-    "y": 480,
+    "x": 240,
+    "y": 310,
     "width": 700,
     "height": 700,
     "selectable": false,
@@ -81,23 +81,222 @@ let components = {
         "accepts": [
           "pirate"
         ],
-        "coords": [{"x":330,"y":70},{"x":698,"y":170},{"x":560,"y":190},{"x":265,"y":170},{"x":265,"y":220},{"x":390,"y":270},{"x":640,"y":240},{"x":420,"y":350},{"x":830,"y":395},{"x":750,"y":560},{"x":530,"y":540},{"x":365,"y":430},{"x":190,"y":402},{"x":40,"y":650},{"x":115,"y":655},{"x":175,"y":720},{"x":260,"y":810},{"x":355,"y":795},{"x":565,"y":825},{"x":655,"y":750},{"x":905,"y":720},{"x":310,"y":569}]
+        "coords": [
+          {
+            "x": 330,
+            "y": 70
+          },
+          {
+            "x": 698,
+            "y": 170
+          },
+          {
+            "x": 560,
+            "y": 190
+          },
+          {
+            "x": 265,
+            "y": 170
+          },
+          {
+            "x": 265,
+            "y": 220
+          },
+          {
+            "x": 390,
+            "y": 270
+          },
+          {
+            "x": 640,
+            "y": 240
+          },
+          {
+            "x": 420,
+            "y": 350
+          },
+          {
+            "x": 830,
+            "y": 395
+          },
+          {
+            "x": 750,
+            "y": 560
+          },
+          {
+            "x": 530,
+            "y": 540
+          },
+          {
+            "x": 365,
+            "y": 430
+          },
+          {
+            "x": 190,
+            "y": 402
+          },
+          {
+            "x": 40,
+            "y": 650
+          },
+          {
+            "x": 115,
+            "y": 655
+          },
+          {
+            "x": 175,
+            "y": 720
+          },
+          {
+            "x": 260,
+            "y": 810
+          },
+          {
+            "x": 355,
+            "y": 795
+          },
+          {
+            "x": 565,
+            "y": 825
+          },
+          {
+            "x": 655,
+            "y": 750
+          },
+          {
+            "x": 905,
+            "y": 720
+          },
+          {
+            "x": 310,
+            "y": 569
+          }
+        ]
       },
       "mission": {
         "accepts": [
           "missions",
           "planetToken"
         ],
-        "coords": [{"x":155,"y":75},{"x":470,"y":110},{"x":820,"y":100},{"x":190,"y":310},{"x":565,"y":390},{"x":890,"y":310},{"x":770,"y":480},{"x":195,"y":535},{"x":440,"y":660},{"x":765,"y":668},{"x":145,"y":890},{"x":550,"y":928},{"x":865,"y":910}]
+        "coords": [
+          {
+            "x": 155,
+            "y": 75
+          },
+          {
+            "x": 470,
+            "y": 110
+          },
+          {
+            "x": 820,
+            "y": 100
+          },
+          {
+            "x": 190,
+            "y": 310
+          },
+          {
+            "x": 565,
+            "y": 390
+          },
+          {
+            "x": 890,
+            "y": 310
+          },
+          {
+            "x": 770,
+            "y": 480
+          },
+          {
+            "x": 195,
+            "y": 535
+          },
+          {
+            "x": 440,
+            "y": 660
+          },
+          {
+            "x": 765,
+            "y": 668
+          },
+          {
+            "x": 145,
+            "y": 890
+          },
+          {
+            "x": 550,
+            "y": 928
+          },
+          {
+            "x": 865,
+            "y": 910
+          }
+        ]
       },
       "playerShip": {
         "multi": true,
-        gapSize: 20,
+        "gapSize": 20,
         "accepts": [
           "playerShip",
           "pirate"
         ],
-        "coords": [{"x":140,"y":180},{"x":355,"y":165},{"x":685,"y":80},{"x":310,"y":340},{"x":780,"y":250},{"x":530,"y":290},{"x":85,"y":475},{"x":410,"y":490},{"x":890,"y":540},{"x":300,"y":700},{"x":635,"y":640},{"x":750,"y":840},{"x":105,"y":780},{"x":410,"y":890}]
+        "coords": [
+          {
+            "x": 140,
+            "y": 180
+          },
+          {
+            "x": 355,
+            "y": 165
+          },
+          {
+            "x": 685,
+            "y": 80
+          },
+          {
+            "x": 310,
+            "y": 340
+          },
+          {
+            "x": 780,
+            "y": 250
+          },
+          {
+            "x": 530,
+            "y": 290
+          },
+          {
+            "x": 85,
+            "y": 475
+          },
+          {
+            "x": 410,
+            "y": 490
+          },
+          {
+            "x": 890,
+            "y": 540
+          },
+          {
+            "x": 300,
+            "y": 700
+          },
+          {
+            "x": 635,
+            "y": 640
+          },
+          {
+            "x": 750,
+            "y": 840
+          },
+          {
+            "x": 105,
+            "y": 780
+          },
+          {
+            "x": 410,
+            "y": 890
+          }
+        ]
       }
     }
   },
@@ -106,8 +305,8 @@ let components = {
     "width": 450,
     "height": 370,
     "selectable": false,
-    "y": 300,
-    "x": 800,
+    "y": 780,
+    "x": 320,
     "image": "url(http://cloud-3.steamusercontent.com/ugc/1849290583449482883/47D2DF312F3D8A823F7ED34EB4864A1259800A86/)",
     "positions": {
       "dims": [
@@ -265,11 +464,11 @@ let components = {
           "meeple"
         ],
         "multi": true,
-        gapSize: -30,
+        "gapSize": -30,
         "coords": [
           {
             "x": 390,
-            "y": 320,
+            "y": 320
           }
         ]
       },
@@ -279,8 +478,37 @@ let components = {
           "meeple"
         ],
         "multi": "true",
-        gapSize: 30,
-        "coords": [{"x":857,"y":225},{"x":699,"y":225},{"x":610,"y":225},{"x":489,"y":225},{"x":403,"y":225},{"x":280,"y":225},{"x":193,"y":225}]
+        "gapSize": 30,
+        "coords": [
+          {
+            "x": 857,
+            "y": 225
+          },
+          {
+            "x": 699,
+            "y": 225
+          },
+          {
+            "x": 610,
+            "y": 225
+          },
+          {
+            "x": 489,
+            "y": 225
+          },
+          {
+            "x": 403,
+            "y": 225
+          },
+          {
+            "x": 280,
+            "y": 225
+          },
+          {
+            "x": 193,
+            "y": 225
+          }
+        ]
       }
     }
   },
@@ -439,37 +667,43 @@ let components = {
     "image": [
       {
         "condition": {
-          "reward": "android", "color": "green"
+          "reward": "android",
+          "color": "green"
         },
         "result": "url(http://cloud-3.steamusercontent.com/ugc/1839158662086912384/D16F0633CEDD67491160BB5D875F43303274944B/)"
       },
       {
         "condition": {
-          "reward": "android", "color": "yellow"
+          "reward": "android",
+          "color": "yellow"
         },
         "result": "url(http://cloud-3.steamusercontent.com/ugc/1839158662086912911/7B5C76B816A1B2E764DD6DA38AF33B4D55F1C807/)"
       },
       {
         "condition": {
-          "reward": "android", "color": "purple"
+          "reward": "android",
+          "color": "purple"
         },
         "result": "url(http://cloud-3.steamusercontent.com/ugc/1839158662086911897/422B8DC6FC3CB914EA78AE2E71BD905449A5664A/)"
       },
       {
         "condition": {
-          "reward": "artifact", "color": "green"
+          "reward": "artifact",
+          "color": "green"
         },
         "result": "url(http://cloud-3.steamusercontent.com/ugc/1839158662086910814/747380DE4FD63DB129856F3AD0CD2FC1F7DE8887/)"
       },
       {
         "condition": {
-          "reward": "artifact", "color": "yellow"
+          "reward": "artifact",
+          "color": "yellow"
         },
         "result": "url(http://cloud-3.steamusercontent.com/ugc/1839158662086910255/77A5A2E7BCAD394F9A1BED73940E19DF75193422/)"
       },
       {
         "condition": {
-          "reward": "artifact", "color": "purple"
+          "reward": "artifact",
+          "color": "purple"
         },
         "result": "url(http://cloud-3.steamusercontent.com/ugc/1839158662086911367/B200E45A0D1E8BBF8A976114786981FAF6999046/)"
       }
@@ -478,58 +712,103 @@ let components = {
   "planetToken": {
     "type": "token",
     "variables": {
-      "meaning": ["1", "2", "3", "4", "5", "artifact", "android"],
-      "side": ["orange", "gray"]
+      "meaning": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "artifact",
+        "android"
+      ],
+      "side": [
+        "orange",
+        "gray"
+      ]
     },
-    width: 100,
-    height: 100,
+    "width": 100,
+    "height": 100,
     "image": [
       {
-        "condition": {"meaning": "1", "side": "orange"},
+        "condition": {
+          "meaning": "1",
+          "side": "orange"
+        },
         "result": "url(http://cloud-3.steamusercontent.com/ugc/1839159157677235250/46B720363489605CE33B6C3B818C2B56CAF3A80C/)"
       },
       {
-        "condition": {"meaning": "1", "side": "gray"},
+        "condition": {
+          "meaning": "1",
+          "side": "gray"
+        },
         "result": "url(http://cloud-3.steamusercontent.com/ugc/1839159157677236468/516A9296B6F6C40A37536F6A375D930903C60C70/)"
       },
       {
-        "condition": {"meaning": "2", "side": "orange"},
+        "condition": {
+          "meaning": "2",
+          "side": "orange"
+        },
         "result": "url(http://cloud-3.steamusercontent.com/ugc/1839159157677237196/6758F603020F16C5F1513EA53120C1BA893142A0/)"
       },
       {
-        "condition": {"meaning": "2", "side": "gray"},
+        "condition": {
+          "meaning": "2",
+          "side": "gray"
+        },
         "result": "url(http://cloud-3.steamusercontent.com/ugc/1839159157677237496/885AD3213F306EFD64F2CD3C45D315CDACCD40B5/)"
       },
       {
-        "condition": {"meaning": "3", "side": "orange"},
+        "condition": {
+          "meaning": "3",
+          "side": "orange"
+        },
         "result": "url(http://cloud-3.steamusercontent.com/ugc/1839159157677238227/295B38758620CC6066902DC881E45BFC3CE35D13/)"
       },
       {
-        "condition": {"meaning": "3", "side": "gray"},
+        "condition": {
+          "meaning": "3",
+          "side": "gray"
+        },
         "result": "url(http://cloud-3.steamusercontent.com/ugc/1839159157677238644/E59030C1D9DE50C52E0CC595967A3E3833882089/)"
       },
       {
-        "condition": {"meaning": "4", "side": "orange"},
+        "condition": {
+          "meaning": "4",
+          "side": "orange"
+        },
         "result": "url(http://cloud-3.steamusercontent.com/ugc/1839159157677239233/B3D477AA7928CCE74E90EDBB642EDDDF5499F6CE/)"
       },
       {
-        "condition": {"meaning": "4", "side": "gray"},
+        "condition": {
+          "meaning": "4",
+          "side": "gray"
+        },
         "result": "url(http://cloud-3.steamusercontent.com/ugc/1839159157677239580/AAB68B560B8EBC6126A68FF60A5545C1AB8DAD96/)"
       },
       {
-        "condition": {"meaning": "5", "side": "orange"},
+        "condition": {
+          "meaning": "5",
+          "side": "orange"
+        },
         "result": "url(http://cloud-3.steamusercontent.com/ugc/1839159157677240150/AC3992957D667166C244803BA2BCC842107A0478/)"
       },
       {
-        "condition": {"meaning": "5", "side": "gray"},
+        "condition": {
+          "meaning": "5",
+          "side": "gray"
+        },
         "result": "url(http://cloud-3.steamusercontent.com/ugc/1839159157677240470/DAC8EDBFA958989C72BEC8AD8EFF551238912BA0/)"
       },
       {
-        "condition": {"meaning": "artifact"},
+        "condition": {
+          "meaning": "artifact"
+        },
         "result": "url(http://cloud-3.steamusercontent.com/ugc/1839158662087120443/49A4E2988BF80870B6CBC925FFE39B990747EE55/)"
       },
       {
-        "condition": {"meaning": "android"},
+        "condition": {
+          "meaning": "android"
+        },
         "result": "url(http://cloud-3.steamusercontent.com/ugc/1839158662087121422/55098611C5F01EC53269C2E06B18169410187ABC/)"
       }
     ]
@@ -581,34 +860,46 @@ let components = {
   "playerShip": {
     "type": "token",
     "variables": {
-      "color": ["red", "green", "blue", "yellow"]
+      "color": [
+        "red",
+        "green",
+        "blue",
+        "yellow"
+      ]
     },
     "width": 30,
     "height": 40,
-    "image": [{
-      "condition": {"color": "red"},
-      "result": "url(https://storage.googleapis.com/cgo-deck-assets/star-meeple/player-red.png)"
+    "image": [
+      {
+        "condition": {
+          "color": "red"
+        },
+        "result": "url(https://storage.googleapis.com/cgo-deck-assets/star-meeple/player-red.png)"
       },
       {
-      "condition": {"color": "blue"},
-      "result": "url(https://storage.googleapis.com/cgo-deck-assets/star-meeple/player-blue.png)"
+        "condition": {
+          "color": "blue"
+        },
+        "result": "url(https://storage.googleapis.com/cgo-deck-assets/star-meeple/player-blue.png)"
       },
       {
-      "condition": {"color": "green"},
-      "result": "url(https://storage.googleapis.com/cgo-deck-assets/star-meeple/player-green.png)"
+        "condition": {
+          "color": "green"
+        },
+        "result": "url(https://storage.googleapis.com/cgo-deck-assets/star-meeple/player-green.png)"
       },
       {
-      "condition": {"color": "yellow"},
-      "result": "url(https://storage.googleapis.com/cgo-deck-assets/star-meeple/player-yellow.png)"
+        "condition": {
+          "color": "yellow"
+        },
+        "result": "url(https://storage.googleapis.com/cgo-deck-assets/star-meeple/player-yellow.png)"
       }
-      ]
-    ,
+    ]
   },
   "player-area": {
     "width": 800,
-    "height": 900,
+    "height": 800,
     "x": 50,
     "y": 50
   }
 }
-module.exports = components;
