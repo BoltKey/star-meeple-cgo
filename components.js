@@ -1,4 +1,4 @@
-{
+let components = {
   "dims": [
     1000,
     1000
@@ -905,3 +905,5 @@
     "y": 50
   }
 }
+
+module.exports = components;
