@@ -24,6 +24,7 @@ switch(macroName) {
                   type: "component reveal",
                   containerId
                 })
+                return;
               }
               
             }
