@@ -11,5 +11,3 @@ function evalMacro(macroName, options, gameSituation, eventManager) {
       break;
   }
 }
-
-module.exports = evalMacro;
