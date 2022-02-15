@@ -395,7 +395,7 @@ let components = {
         y: 900,
         text: "Take damage"
       }
-    }
+    },
     "positions": {
       "dims": [
         1000,
