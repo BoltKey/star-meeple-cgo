@@ -9,13 +9,7 @@ let components = {
     "height": 800,
     "x": 800,
     "y": 30,
-    macroButtons: {
-      takeDamage: {
-        x: 900,
-        y: 900,
-        text: "Take damage"
-      }
-    }
+    
   },
   "__playerOrder": [
     "red",
@@ -395,6 +389,13 @@ let components = {
     "selectable": false,
     "x": 50,
     "y": 25,
+    macroButtons: {
+      takeDamage: {
+        x: 900,
+        y: 900,
+        text: "Take damage"
+      }
+    }
     "positions": {
       "dims": [
         1000,
