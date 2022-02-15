@@ -22,7 +22,7 @@ switch(macroName) {
                   positionName: "inventory",
                   positionIndex: inventoryPos,
                   type: "component reveal",
-                  containerId: 
+                  containerId
                 })
               }
               
