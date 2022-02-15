@@ -7,7 +7,7 @@ switch(macroName) {
     for (let player of gameSituation.players) {
       if (player.color == options.player) {
         console.log("found player red");
-        for (let child of Object.values(player.children.unpositioned)) {
+        for (let child of Object.values(player.area.children.unpositioned)) {
           if (child.name == "playerBoard") {
             for (let inventoryPos = 6; inventoryPos >= 0; --inventoryPos) {
               let containerId;
