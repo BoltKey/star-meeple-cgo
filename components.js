@@ -391,8 +391,8 @@ let components = {
     "y": 25,
     macroButtons: {
       takeDamage: {
-        x: 900,
-        y: 900,
+        x: 700,
+        y: 450,
         text: "Take damage"
       }
     },
