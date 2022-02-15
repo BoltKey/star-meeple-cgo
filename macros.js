@@ -5,7 +5,7 @@ switch(macroName) {
     console.log("taking damage yay");
     console.log(gameSituation, options);
     for (let player of gameSituation.players) {
-      if (player.color == options.color) {
+      if (player.color == options.player) {
         console.log("found player red");
         for (let child of Object.values(player.children.unpositioned)) {
           if (child.name == "playerBoard") {
