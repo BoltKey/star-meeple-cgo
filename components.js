@@ -8,7 +8,14 @@ let components = {
     "width": 800,
     "height": 800,
     "x": 800,
-    "y": 30
+    "y": 30,
+    macroButtons: {
+      takeDamage: {
+        x: 900,
+        y: 900,
+        text: "Take damage"
+      }
+    }
   },
   "__playerOrder": [
     "red",
@@ -300,7 +307,8 @@ let components = {
           }
         ]
       }
-    }
+    },
+    
   },
   "techSupply": {
     "type": "board",

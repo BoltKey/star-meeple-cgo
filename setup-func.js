@@ -25,15 +25,19 @@ async function setup(gameSituation) {
     let techBoard = gameSituation.createComponent("playerTechBoard");
     player.area.addComponent(techBoard);
     
+    let damageSupply = gameSituation.root.addComponent(gameSituation.createBank("damageBag", {infinite: false, contentNames: ["damage"]}), "decks", 5);
+    for (let i = 0; i < 50; ++i) {
+      damageSupply.addComponent(gameSituation.createComponent("damage"));
+    }
     for (let i of [0, 1, 4, 5]) {
-      techBoard.addComponent(gameSituation.createComponent("damage"), "techs", i);
+      techBoard.addComponent(damageSupply.getComponent(), "techs", i);
     }
     
     for (let i of [4, 5, 6]) {
-      playerBoard.addComponent(gameSituation.createComponent("damage"), "inventory", i);
+      playerBoard.addComponent(damageSupply.getComponent(), "inventory", i);
     }
     for (let i of [1, 3, 5]) {
-      playerBoard.addComponent(gameSituation.createComponent("damage"), "rooms", i);
+      playerBoard.addComponent(damageSupply.getComponent(), "rooms", i);
     }
     let colors = ["red", "yellow", "blue"];
     for (let i = 0; i < 3; ++i) {
@@ -52,6 +56,7 @@ async function setup(gameSituation) {
     player.setCounter("score", 0);
     
     mainBoard.addComponent(gameSituation.createComponent("playerShip", {"color": player.color}), "playerShip", 7);
+    
   }
   
   
@@ -62,10 +67,6 @@ async function setup(gameSituation) {
     }
   }
   
-  let damageSupply = gameSituation.root.addComponent(gameSituation.createBank("damageBag", {infinite: false, contentNames: ["damage"]}), "decks", 5);
-  for (let i = 0; i < 30; ++i) {
-    damageSupply.addComponent(gameSituation.createComponent("damage"));
-  }
   
   let androidSupply = gameSituation.root.addComponent(gameSituation.createBank("androidBag", {infinite: false, contentNames: ["meeple"]}), "decks", 6);
   for (let i = 0; i < 30; ++i) {
