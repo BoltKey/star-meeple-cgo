@@ -18,17 +18,17 @@ async function setup(gameSituation) {
     mainBoard.addComponent(pirateSupply.getComponent(), "pirate", index);
   }
   
-  
+  let damageSupply = gameSituation.root.addComponent(gameSituation.createBank("damageBag", {infinite: false, contentNames: ["damage"]}), "decks", 5);
+  for (let i = 0; i < 50; ++i) {
+    damageSupply.addComponent(gameSituation.createComponent("damage"));
+  }
   for (let player of gameSituation.getPlayers()) {
     let playerBoard = gameSituation.createComponent("playerBoard");
     player.area.addComponent(playerBoard);
     let techBoard = gameSituation.createComponent("playerTechBoard");
     player.area.addComponent(techBoard);
     
-    let damageSupply = gameSituation.root.addComponent(gameSituation.createBank("damageBag", {infinite: false, contentNames: ["damage"]}), "decks", 5);
-    for (let i = 0; i < 50; ++i) {
-      damageSupply.addComponent(gameSituation.createComponent("damage"));
-    }
+    
     for (let i of [0, 1, 4, 5]) {
       techBoard.addComponent(damageSupply.getComponent(), "techs", i);
     }
