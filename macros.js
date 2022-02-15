@@ -9,3 +9,5 @@ switch(macroName) {
   
     break;
 }
+
+return macroName;
