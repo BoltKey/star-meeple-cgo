@@ -23,14 +23,14 @@ function emptyInvSpace(board, last) {
   }
   return -1;
 }
-let board;
+let board, pos, containerId;
 switch(macroName) {
   case "takeDamage":
     console.log("taking damage yay");
     console.log(gameSituation, options);
     board = getBoard();
-    let pos = emptyInvSpace(board, true);
-    let containerId;
+    pos = emptyInvSpace(board, true);
+    containerId;
     for (let contId in gameSituation.containers) {
       if (contId.startsWith("bank-damageBag")) {
         containerId = contId;
@@ -48,8 +48,8 @@ switch(macroName) {
     console.log("gaining artifact yay");
     console.log(gameSituation, options);
     board = getBoard();
-    let pos = emptyInvSpace(board, false);
-    let containerId;
+    pos = emptyInvSpace(board, false);
+    containerId;
     for (let contId in gameSituation.containers) {
       if (contId.startsWith("bank-" + (macroName == "gainArtifact" ? "artifact" : "pirate"))) {
         containerId = contId;
