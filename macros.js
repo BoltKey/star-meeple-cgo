@@ -17,7 +17,7 @@ function getBoard() {
 function emptyInvSpace(board, last) {
   for (let inventoryPos = last ? 6 : 0; inventoryPos != last ? -1 : 7; inventoryPos += last ? -1 : 1) {
     
-    if (!child.children.inventory[inventoryPos]) {
+    if (!board.children.inventory[inventoryPos]) {
       return inventoryPos;
     }
   }
