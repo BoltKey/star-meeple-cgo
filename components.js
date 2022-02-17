@@ -394,6 +394,16 @@ let components = {
         x: 700,
         y: 450,
         text: "Take damage"
+      },
+      gainArtifact: {
+        x: 700,
+        y: 400,
+        text: "Gain artifact"
+      },
+      gainPirate: {
+        x: 700,
+        y: 350,
+        text: "Gain pirate"
       }
     },
     "positions": {

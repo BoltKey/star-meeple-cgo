@@ -1,43 +1,67 @@
 // gameSituation, eventManager, options, macroName
 
+
+function getBoard() {
+  for (let player of gameSituation.players) {
+    if (player.color == options.player) {
+      console.log("found player red");
+      for (let child of Object.values(player.area.children.unpositioned)) {
+        if (child.name == "playerBoard") {
+          return child;
+        }
+      }
+    }
+  }
+  
+}
+function emptyInvSpace(board, last) {
+  for (let inventoryPos = last ? 6 : 0; inventoryPos != last ? -1 : 7; inventoryPos += last ? -1 : 1) {
+    
+    if (!child.children.inventory[inventoryPos]) {
+      return inventoryPos;
+    }
+  }
+  return -1;
+}
+
 switch(macroName) {
   case "takeDamage":
     console.log("taking damage yay");
     console.log(gameSituation, options);
-    for (let player of gameSituation.players) {
-      if (player.color == options.player) {
-        console.log("found player red");
-        for (let child of Object.values(player.area.children.unpositioned)) {
-          if (child.name == "playerBoard") {
-            for (let inventoryPos = 6; inventoryPos >= 0; --inventoryPos) {
-              let containerId;
-              for (let contId in gameSituation.containers) {
-                if (contId.startsWith("bank-damageBag")) {
-                  containerId = contId;
-                }
-              }
-              if (!child.children.inventory[inventoryPos]) {
-                eventManager.newEvent("game move", {
-                  destinationId: child.id, 
-                  positionName: "inventory",
-                  positionIndex: inventoryPos,
-                  type: "component reveal",
-                  containerId
-                })
-                return;
-              }
-              
-            }
-          }
-        }
+    let board = getBoard();
+    let pos = emptyInvSpace(board, true);
+    let containerId;
+    for (let contId in gameSituation.containers) {
+      if (contId.startsWith("bank-damageBag")) {
+        containerId = contId;
       }
     }
+    eventManager.newEvent("game move", {
+      destinationId: board.id, 
+      positionName: "inventory",
+      positionIndex: pos,
+      type: "component reveal",
+      containerId
+    })
     break;
-  case "takeArtifact":
-    
-    break;
-  case "takePirate":
-    
+  case "gainArtifact": case "gainPirate":
+    console.log("gaining artifact yay");
+    console.log(gameSituation, options);
+    let board = getBoard();
+    let pos = emptyInvSpace(board, false);
+    let containerId;
+    for (let contId in gameSituation.containers) {
+      if (contId.startsWith("bank-" + (macroName == "gainArtifact" ? "artifact" : "pirate"))) {
+        containerId = contId;
+      }
+    }
+    eventManager.newEvent("game move", {
+      destinationId: board.id, 
+      positionName: "inventory",
+      positionIndex: pos,
+      type: "component reveal",
+      containerId
+    })
     break;
 }
 
