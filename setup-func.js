@@ -117,6 +117,7 @@ async function setup(gameSituation) {
   }
   
   gameSituation.root.addComponent(mainBoard);  // last so mission tooltips display at top
+  gameSituation.activatePlayer("red");
   return 0;
 }
 
