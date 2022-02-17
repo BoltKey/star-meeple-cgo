@@ -9,6 +9,7 @@ let components = {
     "height": 800,
     "x": 800,
     "y": 30,
+    "selectable": false
     
   },
   "__playerOrder": [
