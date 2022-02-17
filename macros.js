@@ -23,12 +23,12 @@ function emptyInvSpace(board, last) {
   }
   return -1;
 }
-
+let board;
 switch(macroName) {
   case "takeDamage":
     console.log("taking damage yay");
     console.log(gameSituation, options);
-    let board = getBoard();
+    board = getBoard();
     let pos = emptyInvSpace(board, true);
     let containerId;
     for (let contId in gameSituation.containers) {
@@ -47,7 +47,7 @@ switch(macroName) {
   case "gainArtifact": case "gainPirate":
     console.log("gaining artifact yay");
     console.log(gameSituation, options);
-    let board = getBoard();
+    board = getBoard();
     let pos = emptyInvSpace(board, false);
     let containerId;
     for (let contId in gameSituation.containers) {
