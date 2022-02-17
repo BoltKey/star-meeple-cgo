@@ -30,6 +30,9 @@ switch(macroName) {
     console.log(gameSituation, options);
     board = getBoard();
     pos = emptyInvSpace(board, true);
+    if (pos == -1) {
+      return;
+    }
     containerId;
     for (let contId in gameSituation.containers) {
       if (contId.startsWith("bank-damageBag")) {
@@ -49,6 +52,9 @@ switch(macroName) {
     console.log(gameSituation, options);
     board = getBoard();
     pos = emptyInvSpace(board, false);
+    if (pos == -1) {
+      return;
+    }
     containerId;
     for (let contId in gameSituation.containers) {
       if (contId.startsWith("bank-" + (macroName == "gainArtifact" ? "artifact" : "pirate"))) {
