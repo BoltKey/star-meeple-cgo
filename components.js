@@ -65,6 +65,17 @@ let components = {
     },
     "selectable": false
   },
+  "card-tech-1": {
+    "positions": {
+      "dims": [50, 50],
+      "storage": {
+        "accepts": ["artifact", "pirate"],
+        "coords": [{x: 25, y: 30}],
+        "multi": true,
+        gapSize: 250
+      }
+    }
+  },
   "mainBoard": {
     "type": "board",
     "image": "url(http://cloud-3.steamusercontent.com/ugc/1835782295709379051/84CD2C192B91890C9E8AE21B4456BAE12061E853/)",
@@ -320,7 +331,7 @@ let components = {
       ],
       "tech": {
         "accepts": [
-          "tech-1",
+          "card-tech-1",
           "tech-2"
         ],
         "coords": [
@@ -550,7 +561,7 @@ let components = {
       "techs": {
         "accepts": [
           "damage",
-          "tech-1",
+          "card-tech-1",
           "tech-2"
         ],
         "coords": [
